@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
@@ -59,4 +62,21 @@ h1, h2 {
 
 #mainLeft {
     border-right: 1px solid rgba(11, 37, 94, 0.938);
+}
+
+.gototopbtn{
+    position: fixed;
+    background: rgba(11, 37, 94, 0.938);
+    color: bisque;
+    width: 50px;
+    height: 50px;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 1.75rem;
+    opacity: 85%;
+    align-items: center;
+    text-decoration: none;
+    text-indent: 0.2rem;
+    text-align: center;
+    line-height: 50px;
 }
