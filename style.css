@@ -1,6 +1,6 @@
 :root{
-    --fontcolor: rgba(11, 37, 94, 0.938);
-    --webbackgroundcolor: bisque;
+    --fontcolor: midnightblue;
+    --webbackgroundcolor: antiquewhite;
 }
 
 html{
@@ -97,10 +97,14 @@ h1, h2 {
     height: 45px;
     bottom: 1rem;
     right: 1rem;
-    border-radius: 1.75rem;
+    border-radius: 50%;
     opacity: 80%;
     text-decoration: none;
     text-indent: 0.2rem;
     text-align: center;
     line-height: 2.75rem;
+}
+
+a:hover[href*='#header'] {
+    background: rgba(25, 25, 112, 0.9);
 }
