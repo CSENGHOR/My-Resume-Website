@@ -5,12 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./style.css" rel="stylesheet">
+	<script type="text/javascript" src="./script.js"></script>
 	<title>My Resume</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
 	<header id="header">
+		<section>
+			<label class="switch" onchange="toggle_dark_mode()">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</section>
 		<!-- resume header with your name and title -->
 		<h1><b>SENGHOR</b> CHHON</h1>
 		<hr>SELF-EMPLOYED<hr>
@@ -88,7 +94,7 @@
 				<p>
 					2007 - 2011
 				</p>
-			</section>
+			</section>			
 		</article>
 		<article id="mainRight">
 			<section>
@@ -119,8 +125,9 @@
 					<li>Ensure that all subtitles are properly translated and adheres to established stylistic
 						guidelines.</li>
 				</ul>
-			</section>
+			</section>			
 		</article>
+		
 		<footer>
 			<section>
 				<a class="gototopbtn" href="#header">

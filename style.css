@@ -1,6 +1,8 @@
 :root{
     --fontcolor: midnightblue;
     --webbackgroundcolor: antiquewhite;
+    --dark-mode-background-color: #2E2E2E;
+    --dark-mode-font-color: antiquewhite;
 }
 
 html{
@@ -18,8 +20,9 @@ body {
 
 h1 {
     font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
+    letter-spacing: .55em;
+    word-spacing: .4em;
+    padding-top: 0.5em;
     padding-bottom: 1em;
 }
 
@@ -56,21 +59,19 @@ a {
 }
 
 .contacts a:link{
-    text-decoration: none;
+    text-decoration: underline;
+    color: var(--fontcolor)
 }
 
 .contacts a:visited {
-    color: var(--fontcolor);
     text-decoration: none;
 }
 
 .contacts a:hover[href*='gmail'], a:hover[href*='github'], a:hover[href*='linkedin'] { 
-    color: var(--fontcolor);
-    text-decoration: none;        
+    text-decoration: none;
 }
 
 .contacts a:active{
-    color: var(--fontcolor);
     text-decoration: none;
 }
 
@@ -91,10 +92,10 @@ h1, h2 {
 
 .gototopbtn{
     position: fixed;
-    background: var(--fontcolor);
+    background-color: var(--fontcolor);
     color: var(--webbackgroundcolor);
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     bottom: 1rem;
     right: 1rem;
     border-radius: 50%;
@@ -102,9 +103,105 @@ h1, h2 {
     text-decoration: none;
     text-indent: 0.2rem;
     text-align: center;
-    line-height: 2.75rem;
+    line-height: 2.85rem;
 }
 
 a:hover[href*='#header'] {
-    background: rgba(25, 25, 112, 0.9);
+    background-color: rgba(25, 25, 112, 0.9);
+}
+
+.dark-mode {
+    color: var(--dark-mode-font-color);
+    background-color: var(--dark-mode-background-color);   
+}
+
+.dark-mode hr {
+    background-color: var(--dark-mode-font-color);
+}
+
+.dark-mode #mainLeft {
+    border-right: 1px solid var(--dark-mode-font-color);
+}
+
+.dark-mode a:link {
+    text-decoration: underline;
+    color: var(--dark-mode-font-color);
+}
+
+.dark-mode a:visited {
+    text-decoration: none;
+    color: var(--dark-mode-font-color)
+}
+
+.dark-mode a:hover {
+    text-decoration: none;
+}
+
+.dark-mode a:active{
+    text-decoration: underline;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    height: 21px;
+    right: 1.25rem;
+    top: 1rem;
+  }
+  
+/* Hide default HTML checkbox */
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 3.75px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 0 #2196F3;    
+  }
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(24px);
+    transform: translateX(16px);
+}
+  
+/* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
 }
